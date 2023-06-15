@@ -1,5 +1,6 @@
 import {useEffect, useState} from 'react';
 import {Marker, Popup, useMap, useMapEvents} from "react-leaflet";
+import {UserIcon} from "./user-icon.jsx";
 
 const UserMarker = () => {
     const [position, setPosition] = useState(null)
@@ -19,7 +20,7 @@ const UserMarker = () => {
     })
 
     return position === null ? null : (
-        <Marker position={position}>
+        <Marker position={position} icon={UserIcon}>
             <Popup>You are here</Popup>
         </Marker>
     )
