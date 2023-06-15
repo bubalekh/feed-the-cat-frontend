@@ -6,5 +6,5 @@ import MapView from "./3-widgets/map-view/ui/map-view.jsx";
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <MapView />
-  </React.StrictMode>,
+  </React.StrictMode>
 )
