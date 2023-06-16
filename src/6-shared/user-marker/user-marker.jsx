@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react';
 import {Marker, Popup, useMap, useMapEvents} from "react-leaflet";
-import {UserIcon} from "./user-icon.jsx";
-import CatPopup from "../../../6-shared/ui/cat-popup.jsx";
+import {UserIcon} from "./ui/user-icon.jsx";
+import CatPopup from "../cat-popup/cat-popup.jsx";
 
 const UserMarker = () => {
     const [position, setPosition] = useState(null)
@@ -25,9 +25,6 @@ const UserMarker = () => {
         <Marker position={position}
                 icon={UserIcon}
                 onClick={() => setOpen(true)}>
-            <CatPopup>
-                Ololo
-            </CatPopup>
         </Marker>
     )
 }

@@ -6,13 +6,3 @@ body {
   width: 100vw;
   height: 100vh;
 }
-
-.icon {
-  width: 48px;
-  height: 48px;
-  display: inline-block;
-  -webkit-mask: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/18515/heart.svg) no-repeat 50% 50%;
-  mask: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/18515/heart.svg) no-repeat 50% 50%;
-  -webkit-mask-size: cover;
-  mask-size: cover;
-}
