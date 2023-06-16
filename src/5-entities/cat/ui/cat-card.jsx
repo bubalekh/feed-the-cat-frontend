@@ -9,11 +9,11 @@ const CatCard = (cat) => {
 
     return (
         <div className={classes.card}>
-            <img src={catImage}  alt="Boris" className={classes.image}/>
+            <img src={catImage}  alt="Boris" className={classes.image} placeholder="Cat Image"/>
             <h1>{catName}</h1>
             <p className={classes.title}>Хороший уличный кот</p>
             <p>Последний раз кормили: вчера в 21:10</p>
-            <p><button>Покормить!</button></p>
+            <p><button className={classes.button}>Покормить!</button></p>
         </div>
     );
 };
