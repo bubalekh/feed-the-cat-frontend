@@ -17,7 +17,6 @@ const CatMarker = ({cat}) => {
     const [open, setOpen] = useState(false)
 
     let catIcon;
-    console.log(getHoursOfLastFeed(cat.lastTimeFed))
 
     if (getHoursOfLastFeed(cat.lastTimeFed) <= 3)
         catIcon = CatIconGreen
