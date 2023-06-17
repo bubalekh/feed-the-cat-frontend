@@ -2,11 +2,13 @@ import React from 'react';
 import {Popup} from "react-leaflet";
 import CatCard from "../../5-entities/cat/ui/cat-card.jsx";
 
-export default function CatPopup({children, onClick}) {
+const CatPopup = ({cat}) => {
 
     return (            //TODO: Cat card!
         <Popup autoPan={true}>
-            <CatCard />
+            <CatCard cat={cat}/>
         </Popup>
     )
 }
+
+export default CatPopup

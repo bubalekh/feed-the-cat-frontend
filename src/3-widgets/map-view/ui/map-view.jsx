@@ -4,7 +4,7 @@ import Map from "../../../4-features/map/ui/map.jsx";
 const MapView = () => {
 
     return (
-        <Map />
+        <Map/>
     )
 }
 
