@@ -1,5 +1,15 @@
 import React from 'react';
 import classes from './cat-card.module.css'
+import {getHoursOfLastFeed, toDate} from "../../../6-shared/tools/tools.js";
+
+function getLastFeedTimeString(timestamp) {
+    const hours = getHoursOfLastFeed(timestamp)
+    if (hours < 1)
+        return 'менее часа назад'
+    return hours <= 3
+        ? 'более ' + hours + ' часов назад'
+        : toDate(timestamp)
+}
 
 const CatCard = ({cat}) => {
 
@@ -11,7 +21,7 @@ const CatCard = ({cat}) => {
             <img src={catImage} alt={cat.name} className={classes.image} placeholder={cat.name}/>
             <h1>{cat.name}</h1>
             <p className={classes.title}>{cat.description}</p>
-            <p>Последний раз кормили: {cat.lastTimeFed}</p>
+            <p>Последний раз кормили: {getLastFeedTimeString(cat.lastTimeFed)}</p>
             <p>
                 <button className={classes.button}>Покормить!</button>
             </p>

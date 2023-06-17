@@ -8,5 +8,3 @@ export const UserIcon = new Leaflet.Icon({
     popupAnchor: [0, -32],
     iconSize: [48, 48]
 })
-
-
