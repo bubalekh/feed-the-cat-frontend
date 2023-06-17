@@ -6,8 +6,8 @@ function getLastFeedTimeString(timestamp) {
     const hours = getHoursOfLastFeed(timestamp)
     if (hours < 1)
         return 'менее часа назад'
-    return hours <= 3
-        ? 'более ' + hours + ' часов назад'
+    return hours < 3
+        ? 'менее ' + (hours + 1) + ' часов назад'
         : toDate(timestamp)
 }
 
